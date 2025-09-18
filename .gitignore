@@ -1,3 +1,7 @@
+# Environment variables
+# Protect your secret API keys!
+.env
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
