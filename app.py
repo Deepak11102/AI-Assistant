@@ -6,11 +6,6 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_community.llms import Ollama
 
 # --- LOAD ENVIRONMENT VARIABLES ---
-# Create a .env file in your project directory and add your LANGCHAIN_API_KEY
-# LANGCHAIN_API_KEY="your_api_key_here"
-os.environ["LANGCHAIN_TRACKING_V2"]="true"
-os.environ["LANGCHAIN_API_KEY"]=os.getenv("LANGCHAIN_API_KEY")
-os.environ["Gemini_API_KEY"]=os.getenv("Gemini_API_KEY")
 load_dotenv()
 
 # --- PAGE CONFIGURATION ---
@@ -145,3 +140,4 @@ if user_input := st.chat_input("Ask your questions..."):
                 error_message = f"Sorry, I encountered an error. Please try again. Details: {e}"
                 st.error(error_message)
                 st.session_state.messages.append({"role": "assistant", "content": error_message})
+
